@@ -1,0 +1,2 @@
+// "Blank" final.
+class Poppet { }
