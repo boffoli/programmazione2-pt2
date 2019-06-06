@@ -8,11 +8,11 @@ public class DirList {
 		File path = new File(".");
 		String[] list; 
 		if(args.length == 0)
-		list = path.list();
+			list = path.list();
 		else
-		list = path.list(new DirFilter(args[0]));
+			list = path.list(new DirFilter(args[0]));
 		for(int i = 0; i < list.length; i++)
-		System.out.println(list[i]);
+			System.out.println(list[i]);
 	}
 }
 
