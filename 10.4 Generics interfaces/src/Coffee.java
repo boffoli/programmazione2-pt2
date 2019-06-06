@@ -9,9 +9,9 @@ public class Coffee {
   public static void main(String[] args) {
 	    CoffeeGenerator gen = new CoffeeGenerator();	/*Crea un oggetto di classe generator invocando il costruttore opportuno. Crea un iteratore su questo oggetto. Itera sull’iteratore */
 	    for(int i = 0; i < 5; i++)
-	      System.out.println(gen.next());	  
+	    	System.out.println(gen.next());	  
 	    for(Coffee c : new CoffeeGenerator(5))
-	      System.out.println(c);
+	    	System.out.println(c);
 	  }
 }
 

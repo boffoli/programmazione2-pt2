@@ -7,7 +7,7 @@ import java.net.*;
 
 public class PerfectTime extends UnicastRemoteObject implements PerfectTimeI {
 	// Implementation of the interface:
-	public long getPerfectTime() throws     RemoteException {
+	public long getPerfectTime() throws RemoteException {
 		return System.currentTimeMillis();
 	}
 	// Must implement constructor

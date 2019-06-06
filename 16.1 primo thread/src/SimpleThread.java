@@ -12,9 +12,10 @@ public class SimpleThread extends Thread {
 				return;
 		}
 	}
+	
 	public static void main(String[] args) {
-	for(int i = 0; i < 5; i++)
-		new SimpleThread().start();
-	System.out.println("All Threads Started");
+		for(int i = 0; i < 5; i++)
+			new SimpleThread().start();
+		System.out.println("All Threads Started");
 	}
 }

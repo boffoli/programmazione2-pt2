@@ -10,26 +10,26 @@ public class JabberServer { //jabber = chiacchiera
 		ServerSocket s = new ServerSocket(PORT);
 		System.out.println("Started: " + s);
 		try {
-			// si blocca fino a quando non c’è una connessione
-			Socket socket = s.accept();
-			// connessione accettata
-		try {
-		System.out.println( "Connessione accettata: "+ socket);
-		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-		// Flush automatico con PrintWriter:
-		PrintWriter out =new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())),true);
-		while (true) {
-			String str = in.readLine();
-			if (str.equals("END")) 
-				break;
-			System.out.println("Echoing: " + str);
-			out.println(str);
-		}
-		// chiude sempre i due socket...
-		} finally {
-			System.out.println("closing...");
-			socket.close();
-		}
+				// si blocca fino a quando non c’è una connessione
+				Socket socket = s.accept();
+				// connessione accettata
+			try {
+			System.out.println( "Connessione accettata: "+ socket);
+			BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			// Flush automatico con PrintWriter:
+			PrintWriter out =new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())),true);
+			while (true) {
+				String str = in.readLine();
+				if (str.equals("END")) 
+					break;
+				System.out.println("Echoing: " + str);
+				out.println(str);
+			}
+			// chiude sempre i due socket...
+			} finally {
+				System.out.println("closing...");
+				socket.close();
+			}
 		} 
 		finally {
 			s.close();//ServerSocket

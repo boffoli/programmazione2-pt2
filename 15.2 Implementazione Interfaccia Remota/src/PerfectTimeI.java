@@ -3,6 +3,5 @@
 
 import java.rmi.*;
 	interface PerfectTimeI extends Remote {
-	long getPerfectTime() throws 			
-							RemoteException;
+		long getPerfectTime() throws RemoteException;
 } 
