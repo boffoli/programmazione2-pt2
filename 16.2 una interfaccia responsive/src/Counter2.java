@@ -26,10 +26,11 @@ public class Counter2 extends JApplet {
 		private boolean runFlag = true;
 		SeparateSubTask() { start(); }
 		void invertFlag() { runFlag = !runFlag; }
+		
 		public void run() {
 			while (true) {
 				try {
-				sleep(100);
+					sleep(100);
 				} catch(InterruptedException e) {
 					System.err.println("Interrupted");
 				}
