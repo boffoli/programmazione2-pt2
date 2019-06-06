@@ -1,7 +1,7 @@
 public class GenericMethods {
   public <T> void f(T x) {
-    System.out.println(	 x.getClass().getName());	}// il metodo getname restituisce il nome della classse a cui appartiene l'oggetto
-  
+    System.out.println(	 x.getClass().getName());// il metodo getname restituisce il nome della classse a cui appartiene l'oggetto	
+    } 
   public static void main(String[] args) {
     GenericMethods gm = new GenericMethods();
     gm.f("");
