@@ -2,7 +2,7 @@ class Fruit {}
 class Orange extends Fruit {}
 class Apple extends Fruit {}
 class Jonathan extends Apple {}
-///
+
 public class Holder<T> {
   private T value;
   
