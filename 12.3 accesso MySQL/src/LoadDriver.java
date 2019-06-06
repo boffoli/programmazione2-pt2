@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.io.BufferedReader; 
 import java.io.FileReader;
+import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,7 +10,7 @@ import java.sql.Statement;
 // Notice, do not import com.mysql.jdbc.*// or you will have problems!// add as jar to the project
 
 public class LoadDriver {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
     	char c[]=new char[20];
         try {
             // The newInstance() call is a work around for some// broken Java implementations
@@ -27,12 +28,11 @@ public class LoadDriver {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/comuni?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&user=root&password=");
             Statement s = conn.createStatement();
             
-            FileReader fr = new FileReader("C:\\Users\\mirco\\Java-workspace-MAP_OLD\\MAP 18.3 accesso MySQL\\src\\02__19_07_2018_immobile x.txt");
+            FileReader fr = new FileReader("02__19_07_2018_immobile x.txt");
             BufferedReader br = new BufferedReader(fr); 
             
             br.read(c); 
-            for (int i = 0; i <20 ; i++) 
-            { 
+            for (int i = 0; i <20 ; i++) { 
                 System.out.print(c[i]); 
             } 
             System.out.println(); 

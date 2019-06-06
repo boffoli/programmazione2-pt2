@@ -3,8 +3,7 @@
 import java.sql.*;
 
 public class Lookup {
-public static void main(String[] args)
-	throws SQLException, ClassNotFoundException {
+public static void main(String[] args) throws SQLException, ClassNotFoundException {
 	String dbUrl = "jdbc:odbc:people";
 	String user = "";
 	String password = "";
@@ -33,5 +32,5 @@ public static void main(String[] args)
 		del ResultSet partono da 1 */
 		}
 		s.close(); // Also closes ResultSet
-		}
+	}
 }
