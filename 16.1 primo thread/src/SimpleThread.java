@@ -1,4 +1,5 @@
-// Altro esempio semplice sui Thread.
+// Altro esempio semplice sui Thread: estensione classe thread
+
 public class SimpleThread extends Thread {
 	private int countDown = 5;
 	private static int threadCount = 0;
